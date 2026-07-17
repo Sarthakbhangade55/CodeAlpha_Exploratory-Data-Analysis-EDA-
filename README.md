@@ -1,152 +1,201 @@
-# 📊 Task 2: Exploratory Data Analysis (EDA)
+# 📊 Exploratory Data Analysis (EDA) on Books Dataset
 
 ## 📌 Project Overview
 
-This project focuses on performing Exploratory Data Analysis (EDA) on a books dataset collected from a public website. The goal is to understand the dataset by exploring its structure, identifying trends and patterns, detecting anomalies, validating assumptions using statistics and visualizations, and assessing data quality before further analysis.
+This project performs **Exploratory Data Analysis (EDA)** on a books dataset collected through web scraping. The objective is to understand the dataset, identify trends and patterns, detect anomalies, and evaluate data quality using statistical analysis and visualizations.
 
 ---
 
 ## 🎯 Objectives
 
-* Ask meaningful questions before analyzing the dataset.
-* Explore the dataset structure, variables, and data types.
-* Generate summary statistics.
-* Identify trends, patterns, and anomalies.
-* Test hypotheses using statistical analysis and visualizations.
-* Detect missing values, duplicate records, and other potential data quality issues.
+- Ask meaningful questions before analysis.
+- Explore dataset structure and variables.
+- Analyze data types and summary statistics.
+- Identify trends, patterns, and anomalies.
+- Validate assumptions using statistics and visualizations.
+- Detect missing values and duplicate records.
 
 ---
 
 ## 🛠️ Technologies Used
 
-* Python 3.13
-* Pandas
-* Matplotlib
-* Seaborn
+- Python 3.13
+- Pandas
+- Matplotlib
+- Seaborn
 
 ---
 
-## 📂 Dataset
+## 📂 Dataset Information
 
-**Dataset File:** `books_dataset.csv`
+**Dataset:** `books_dataset.csv`
 
-### Dataset Features
+| Feature | Description |
+|---------|-------------|
+| Title | Name of the book |
+| Price (£) | Price of the book |
+| Availability | Stock availability |
+| Rating | Book rating (1–5) |
+| Page | Web page number |
 
-| Feature      | Description                            |
-| ------------ | -------------------------------------- |
-| Title        | Name of the book                       |
-| Price (£)    | Price of the book                      |
-| Availability | Stock availability                     |
-| Rating       | Book rating (1–5)                      |
-| Page         | Page number where the book was scraped |
+**Dataset Summary**
+
+- Total Records: **1000**
+- Total Features: **5**
+- Source: Books to Scrape
 
 ---
 
-## ❓ Questions Asked Before Analysis
+## ❓ Questions Asked
 
-* How many books are available in the dataset?
-* What is the average price of books?
-* Which book is the most expensive?
-* Which book is the least expensive?
-* Which rating appears most frequently?
-* Are all books available?
-* Are there any missing values?
-* Are there duplicate records?
-* Does a higher rating correspond to a higher price?
-* Are there any unusual (outlier) prices?
+Before starting the analysis, the following questions were considered:
+
+- How many books are available?
+- What is the average price of books?
+- Which book is the most expensive?
+- Which book is the least expensive?
+- Which rating appears most frequently?
+- Are there missing values?
+- Are there duplicate records?
+- Does a higher rating correspond to a higher price?
+- Are there any unusual price values (outliers)?
 
 ---
 
 ## 🔍 EDA Process
 
-The following steps were performed during the analysis:
+The following analyses were performed:
 
-* Dataset preview
-* Dataset shape analysis
-* Column exploration
-* Data type inspection
-* Missing value detection
-* Duplicate record detection
-* Summary statistics
-* Trend analysis
-* Pattern identification
-* Correlation analysis
-* Outlier detection
-* Data quality assessment
-
----
-
-## 📊 Visualizations
-
-The following charts were generated:
-
-* Rating Distribution
-* Price Distribution
-* Price vs Rating (Box Plot)
-* Books per Page
-* Correlation Heatmap
-
-All visualizations are saved in the **eda_outputs/** folder.
+- Dataset Preview
+- Data Structure Analysis
+- Data Type Inspection
+- Missing Value Analysis
+- Duplicate Record Detection
+- Summary Statistics
+- Trend Analysis
+- Pattern Identification
+- Correlation Analysis
+- Outlier Detection
+- Data Quality Assessment
 
 ---
 
-## 📈 Key Findings
+# 📈 Visualizations
 
-* The dataset contains **1000 books** collected from **50 pages**.
-* Book prices range from **£10.00** to **£59.99**.
-* The average book price is approximately **£35.07**.
-* Ratings range from **1 to 5**.
-* The dataset contains **no missing values**.
-* No duplicate records were found.
-* Price variations exist across different rating categories.
-* The dataset is clean and suitable for further analysis.
+## 1️⃣ Rating Distribution
+
+Shows the number of books in each rating category.
+
+![Rating Distribution](eda_outputs/rating_distribution.png)
+
+---
+
+## 2️⃣ Price Distribution
+
+Shows how book prices are distributed.
+
+![Price Distribution](eda_outputs/price_distribution.png)
+
+---
+
+## 3️⃣ Price vs Rating
+
+Compares book prices across different rating categories.
+
+![Price vs Rating](eda_outputs/price_vs_rating.png)
+
+---
+
+## 4️⃣ Books per Page
+
+Shows the number of books collected from each webpage.
+
+![Books per Page](eda_outputs/books_per_page.png)
+
+---
+
+## 5️⃣ Correlation Heatmap
+
+Displays the correlation between numerical variables.
+
+![Correlation Heatmap](eda_outputs/correlation_heatmap.png)
+
+---
+
+## 📊 Key Findings
+
+- Successfully analyzed **1000 books** collected from **50 pages**.
+- Average book price is approximately **£35.07**.
+- Book prices range from **£10.00** to **£59.99**.
+- Ratings vary between **1 and 5**.
+- No missing values were found.
+- No duplicate records were detected.
+- The dataset is clean and ready for further analysis or machine learning.
 
 ---
 
 ## 📖 Insights
 
-The Exploratory Data Analysis revealed several useful insights:
-
-* Most books fall within a moderate price range.
-* Book ratings are distributed across all five categories.
-* Price distributions vary across rating levels.
-* The correlation analysis indicates the relationship between numerical variables.
-* Data quality checks confirmed that the dataset is complete and consistent.
+- Most books fall within a moderate price range.
+- Ratings are distributed across all five categories.
+- Price varies among different rating groups.
+- Correlation analysis provides insight into relationships among numerical variables.
+- Data quality checks confirm that the dataset is complete and reliable.
 
 ---
 
 ## 🚀 How to Run
 
-1. Install the required libraries:
+### 1. Install Required Libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Run the EDA script:
+### 2. Run the EDA Script
 
 ```bash
 python eda.py
 ```
 
-3. View the generated visualizations inside the **eda_outputs/** folder.
+### 3. View Results
+
+All generated charts are stored inside the **eda_outputs/** folder.
+
+---
+
+## 📁 Project Structure
+
+```
+Task2_EDA/
+│
+├── books_dataset.csv
+├── eda.py
+├── README.md
+│
+└── eda_outputs/
+    ├── rating_distribution.png
+    ├── price_distribution.png
+    ├── price_vs_rating.png
+    ├── books_per_page.png
+    └── correlation_heatmap.png
+```
 
 ---
 
 ## 📚 Learning Outcomes
 
-This project demonstrates the following skills:
+Through this project, the following skills were demonstrated:
 
-* Exploratory Data Analysis (EDA)
-* Data Cleaning
-* Data Validation
-* Statistical Analysis
-* Trend Analysis
-* Pattern Recognition
-* Outlier Detection
-* Data Visualization
-* Data Quality Assessment
-* Python Programming
+- Exploratory Data Analysis (EDA)
+- Data Cleaning
+- Data Validation
+- Statistical Analysis
+- Trend Analysis
+- Pattern Recognition
+- Outlier Detection
+- Data Visualization using Matplotlib and Seaborn
+- Data Quality Assessment
 
 ---
 
@@ -160,4 +209,4 @@ B.Tech – Artificial Intelligence & Data Science
 
 ## 📄 License
 
-This project was created for educational and internship purposes.
+This project is created for educational and internship purposes.
